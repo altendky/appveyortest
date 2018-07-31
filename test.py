@@ -6,4 +6,4 @@ print('\n'.join(
     for k, v in os.environ.items()
 ))
 
-assert '42' == os.environ['SECRET']"
+assert '42' == os.environ['SECRET']
