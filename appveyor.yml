@@ -1,0 +1,13 @@
+environment:
+  global:
+    SECRET: 42
+    PYTHON_TEST: "from __future__ import print_function; import os; print('\n'.join('{}: {}'.format(k, v) for k, v in os.environ.items())); assert '42' == os.environ['SECRET']"
+
+  matrix:
+    - PY_VERSION: "3.7"
+    - PY_VERSION: "3.6"
+    - PY_VERSION: "2.7"
+
+build_script:
+  - ps: Get-ChildItem env:
+  - py -"%PY_VERSION%" -c "%PYTHON_TEST%"
