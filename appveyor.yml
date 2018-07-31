@@ -9,7 +9,10 @@ environment:
     - PY_VERSION: "2.7"
       SECRET: 42
 
+install:
+  - ps: py -$env:PY_VERSION -m virtualenv venv
+
 build_script:
   - ps: |
       Get-ChildItem env:
-  - ps: py -$env:PY_VERSION test.py
+  - ps: venv/scripts/python test.py
