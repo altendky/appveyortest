@@ -1,11 +1,13 @@
 environment:
-  global:
-    SECRET: 42
-
   matrix:
     - PY_VERSION: "3.7"
+      SECRET: 42
+
     - PY_VERSION: "3.6"
+      SECRET: 42
+
     - PY_VERSION: "2.7"
+      SECRET: 42
 
 build_script:
   - ps: |
