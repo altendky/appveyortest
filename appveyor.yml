@@ -12,4 +12,4 @@ environment:
 build_script:
   - ps: |
       Get-ChildItem env:
-  - py -%PY_VERSION% test.py
+  - ps: py -$env:PY_VERSION test.py
