@@ -15,4 +15,4 @@ install:
 build_script:
   - ps: |
       Get-ChildItem env:
-  - ps: venv/scripts/python test.py
+  - ps: venv/scripts/python test.py 2>&1
